@@ -4,8 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>RideSaver.InternalAPI</PackageId>
     <Version>0.0.1</Version>
     <Authors>Elias Schablowski; John Hanna</Authors>
