@@ -13,7 +13,7 @@ jobs:
               with:
                   dotnet-version: 6.0.*
             - name: Build and Pack
-              run: nuget pack InternalAPI/InternalAPI.csproj -OutputDirectory nuget -Build
+              run: nuget pack InternalAPI.csproj -OutputDirectory nuget -Build
             # Publish
             - uses: actions/upload-artifact@v3
               with:
