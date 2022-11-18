@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>RideSaver.InternalAPI</id>
+        <version>0.0.1</version>
+        <authors>Elias Schablowski; John Hanna</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Internal RideSaver gRPC API server</description>
+        <language>en-US</language>
+        <projectUrl>https://github.com/RideSaver/InternalAPI</projectUrl>
+        <repository type="git" url="https://github.com/RideSaver/InternalAPI.git" branch="main" />>
+        <license type="expression">MIT</license>
+        <dependencies>
+            <dependency id="Google.Protobuf" version="[3,4)" />
+            <dependency id="Grpc.AspNetCore" version="[2,3)" />
+            <dependency id="Grpc.Core" version="[2,3)" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin/Debug/net6.0/*.dll" target="lib" />
+    </files>
+</package>
