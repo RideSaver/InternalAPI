@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>RideSaver.InternalAPI</PackageId>
+    <PackageDescription>This is the internal gRPC API for RideSaver</PackageDescription>
     <Version>0.0.1</Version>
     <Authors>Elias Schablowski; John Hanna</Authors>
     <Company>RideSaver</Company>
@@ -19,8 +20,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
+
+
     <Protobuf Include="protos/Estimates.proto" GrpcServices="Server" />
     <Protobuf Include="protos/Requests.proto" GrpcServices="Server" />
   </ItemGroup>

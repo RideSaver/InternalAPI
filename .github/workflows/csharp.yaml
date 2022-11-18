@@ -12,9 +12,8 @@ jobs:
               uses: actions/setup-dotnet@v1
               with:
                   dotnet-version: 6.0.*
-
-            - run: dotnet build
-            - run: nuget pack InternalAPI/InternalAPI.csproj -OutputDirectory nuget
+            - name: Build and Pack
+              run: nuget pack InternalAPI/InternalAPI.csproj -OutputDirectory nuget -Build
             # Publish
             - uses: actions/upload-artifact@v3
               with:
