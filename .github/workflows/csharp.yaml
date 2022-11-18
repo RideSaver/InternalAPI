@@ -1,0 +1,26 @@
+name: Publish NuGet packages
+on:
+    push
+jobs:
+    publish:
+        name: build, pack & publish
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup dotnet
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: 6.0.*
+
+            - run: dotnet build
+            - run: nuget pack InternalAPI/InternalAPI.csproj -OutputDirectory nuget
+            # Publish
+            - uses: actions/upload-artifact@v3
+              with:
+                  name: NuGet package
+                  path: nuget/*.nupkg
+            - name: add GitHub source
+              run: nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/RideSaver/index.json" -UserName ${{github.actor}} -Password ${{secrets.GITHUB_TOKEN}} -StorePasswordInClearText
+            - name: publish on version change
+              run: dotnet nuget push "nuget/*.nupkg" --source GitHub --api-key ${{secrets.GITHUB_TOKEN}}
