@@ -23,4 +23,4 @@ jobs:
             - name: add GitHub source
               run: nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/RideSaver/index.json" -UserName ${{github.actor}} -Password ${{secrets.GITHUB_TOKEN}} -StorePasswordInClearText
             - name: publish on version change
-              run: dotnet nuget push "nuget/*.nupkg" --source GitHub --api-key ${{secrets.GITHUB_TOKEN}}
+              run: dotnet nuget push "**/nuget/*.nupkg" --source GitHub --api-key ${{secrets.GITHUB_TOKEN}}
