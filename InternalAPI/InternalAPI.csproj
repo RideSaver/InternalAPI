@@ -11,6 +11,7 @@
     <Authors>Elias Schablowski; John Hanna</Authors>
     <Company>RideSaver</Company>
     <PackRelease>true</PackRelease>
+    <RepositoryUrl>https://github.com/RideSaver/InternalAPI</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.9" />
