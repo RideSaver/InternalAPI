@@ -2,8 +2,8 @@ syntax = "proto3";
 option csharp_namespace = "InternalAPI";
 
 import "google/protobuf/timestamp.proto";
-import "Location.proto";
-import "Currency.proto";
+import "LocationModel.proto";
+import "CurrencyModel.proto";
 
 service Requests {
 	rpc PostRideRequest(PostRideRequestModel) returns (RideModel);
