@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "InternalAPI";
+
+
+message CurrencyModel {
+	double price = 1;
+	string currency = 2;
+}

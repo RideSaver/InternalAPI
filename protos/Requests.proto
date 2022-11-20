@@ -2,6 +2,8 @@ syntax = "proto3";
 option csharp_namespace = "InternalAPI";
 
 import "google/protobuf/timestamp.proto";
+import "Location.proto";
+import "Currency.proto";
 
 service Requests {
 	rpc PostRideRequest(PostRideRequestModel) returns (RideModel);
@@ -46,20 +48,4 @@ enum Stage {
 	STAGE_CANCELLED = 3;
 	STAGE_COMPLETED = 4;
 }
-
-message LocationModel {
-	double latitude = 1;
-	double longitude = 2;
-	double height = 3;
-	string planet = 4;
-}
-
-message CurrencyModel {
-	double price = 1;
-	string currency = 2;
-}
-
-
-
-
 

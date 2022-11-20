@@ -22,7 +22,6 @@
     </PackageReference>
 
 
-    <Protobuf Include="protos/Estimates.proto" GrpcServices="Server" />
-    <Protobuf Include="protos/Requests.proto" GrpcServices="Server" />
+    <Protobuf Include="protos/*.proto" GrpcServices="Server" ProtoRoot="protos" AdditionalImportDirs="$(NuGetPackageRoot)grpc.tools/*/build/native/include/google/protobuf/" />
   </ItemGroup>
 </Project>
