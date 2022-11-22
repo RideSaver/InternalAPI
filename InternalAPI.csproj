@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackageId>RideSaver.InternalAPI</PackageId>
     <PackageDescription>This is the internal gRPC API for RideSaver</PackageDescription>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
     <Authors>Elias Schablowski; John Hanna</Authors>
     <Company>RideSaver</Company>
     <PackRelease>true</PackRelease>
@@ -22,6 +22,6 @@
     </PackageReference>
 
 
-    <Protobuf Include="protos/*.proto" GrpcServices="Server" ProtoRoot="protos" AdditionalImportDirs="$(NuGetPackageRoot)grpc.tools/*/build/native/include/google/protobuf/" />
+    <Protobuf Include="protos/*.proto" GrpcServices="Both" ProtoRoot="protos" AdditionalImportDirs="$(NuGetPackageRoot)grpc.tools/*/build/native/include/google/protobuf/" />
   </ItemGroup>
 </Project>
