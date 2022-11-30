@@ -30,4 +30,5 @@ message EstimateModel {
 	int32 seats = 6;
 	string requestUrl = 7;
 	string displayName = 8;
+    google.protobuf.Timestamp invalidTime = 9;
 }
