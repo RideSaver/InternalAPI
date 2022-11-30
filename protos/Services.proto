@@ -1,0 +1,20 @@
+syntax = "proto3";
+option csharp_namespace = "InternalAPI";
+
+service Services {
+	rpc GetServiceByHash(GetServiceByHashRequest) returns (ServiceModel);
+	rpc GetServices(GetServicesRequest) returns (stream ServiceModel);
+}
+
+message GetServiceByHashRequest {
+	bytes hash = 1;
+}
+
+message ServiceModel {
+	string name = 1;
+	string client_id = 2;
+}
+
+message GetServicesRequest {
+
+}

@@ -22,6 +22,6 @@
     </PackageReference>
 
 
-    <Protobuf Include="protos/*.proto" GrpcServices="Both" ProtoRoot="protos" AdditionalImportDirs="$(NuGetPackageRoot)grpc.tools/*/build/native/include/google/protobuf/" />
+    <Protobuf Include="protos/*.proto" GrpcServices="Both" ProtoRoot="protos" AdditionalImportDirs="$(NuGetPackageRoot)grpc.tools/2.50.0/build/native/include/google/protobuf/" />
   </ItemGroup>
 </Project>
