@@ -1,9 +1,12 @@
 syntax = "proto3";
 option csharp_namespace = "InternalAPI";
+import "google/protobuf/empty.proto";
+import "LocationModel.proto";
 
 service Services {
 	rpc GetServiceByHash(GetServiceByHashRequest) returns (ServiceModel);
-	rpc GetServices(GetServicesRequest) returns (stream ServiceModel);
+	rpc GetServices(google.protobuf.Empty) returns (stream ServiceModel);
+    rpc RegisterService(RegisterServiceRequest) returns (google.protobuf.Empty);
 }
 
 message GetServiceByHashRequest {
@@ -15,6 +18,22 @@ message ServiceModel {
 	string client_id = 2;
 }
 
-message GetServicesRequest {
 
+message RegisterServiceRequest {
+    bytes id = 1;
+    string name = 2;
+    string client_name = 3;
+    repeated ServiceFeatures features = 4;
+
+}
+enum ServiceFeatures {
+    SERVICEFEATURES_UNSPECIFIED = 0;
+    SERVICEFEATURES_SHARED = 1;
+    SERVICEFEATURES_CASH = 2;
+    SERVICEFEATURES_PROFESSIONAL_DRIVER = 3;
+    SERVICEFEATURES_SELF_DRIVING = 4;
+}
+
+message Area {
+    repeated LocationModel outline = 1;
 }
