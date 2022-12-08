@@ -9,7 +9,6 @@ service Users {
 
 message GetUserAccessTokenRequest {
 	string service_id = 1;
-    string session_token = 2;
 }
 
 message GetUserAccessTokenResponse {
