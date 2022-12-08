@@ -1,0 +1,17 @@
+syntax = "proto3";
+option csharp_namespace = "InternalAPI";
+import "google/protobuf/empty.proto";
+import "LocationModel.proto";
+
+service Users {
+	rpc GetUserAccessToken(GetUserAccessTokenRequest) returns (GetUserAccessTokenResponse);
+}
+
+message GetUserAccessTokenRequest {
+	string service_id = 1;
+    string session_token = 2;
+}
+
+message GetUserAccessTokenResponse {
+	string access_token = 1;
+}
