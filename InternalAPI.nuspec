@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>RideSaver.InternalAPI</id>
-        <version>0.0.5</version>
+        <version>0.0.6</version>
         <authors>Elias Schablowski; John Hanna</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Internal RideSaver gRPC API server</description>
