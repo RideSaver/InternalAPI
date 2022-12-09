@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option csharp_namespace = "InternalAPI";
+
+service Authentication {
+    rpc GetIdentity(IdentityRequest) returns (IdentityResponse);
+    rpc AddIdentity(IdentityResponse) returns (google.protobuf.Empty);
+}
+
+message IdentityRequest {
+    string username = 1;
+}
+
+message IdentityResponse {
+    string Id = 1;
+    string username = 2;
+    string passwordSalt = 3;
+    string passwordHash = 4;
+    string email = 5;
+}
