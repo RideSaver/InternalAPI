@@ -1,0 +1,19 @@
+{
+    "name": "@ridesaver/internalapi",
+    "version": "0.0.1",
+    "files": [
+        "protos/*",
+        "*.js"
+    ],
+    "dependencies": {
+        "@grpc/grpc-js": "^1.8.0",
+        "@grpc/proto-loader": "^0.7.4",
+        "google-protobuf": "^3.21.2"
+    },
+    "devDependencies": {
+        "grpc-tools": "^1.12.3"
+    },
+    "scripts": {
+        "build": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=grpc_js:. protos/*.proto -Iprotos"
+    }
+}
