@@ -6,7 +6,11 @@ import "LocationModel.proto";
 service Services {
 	rpc GetServiceByHash(GetServiceByHashRequest) returns (ServiceModel);
 	rpc GetServices(google.protobuf.Empty) returns (stream ServiceModel);
-    rpc RegisterService(RegisterServiceRequest) returns (google.protobuf.Empty);
+    rpc RegisterService(RegisterServiceRequest) returns (void);
+}
+
+message void {
+
 }
 
 message GetServiceByHashRequest {
