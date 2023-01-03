@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>RideSaver.InternalAPI</id>
-        <version>0.1.1</version>
+        <version>0.1.2</version>
         <authors>Elias Schablowski; John Hanna</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Internal RideSaver gRPC API server</description>
@@ -13,7 +13,7 @@
         <dependencies>
             <dependency id="Google.Protobuf" version="[3,4)" />
             <dependency id="Grpc.AspNetCore" version="[2,3)" />
-            <dependency id="Grpc.Core" version="[2,3)" />
+            <dependency id="Grpc.Net.Client" version="[2,3)" />
         </dependencies>
     </metadata>
     <files>
