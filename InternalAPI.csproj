@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackageId>RideSaver.InternalAPI</PackageId>
     <PackageDescription>This is the internal gRPC API for RideSaver</PackageDescription>
-    <Version>0.0.3</Version>
+    <Version>0.1.3</Version>
     <Authors>Elias Schablowski; John Hanna</Authors>
     <Company>RideSaver</Company>
     <PackRelease>true</PackRelease>
